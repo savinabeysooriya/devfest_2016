@@ -1,0 +1,1150 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Raleway', sans-serif;
+  color: #ffffff;
+  background-color: #22283f;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body::before {
+  /* never visible - this is used in jQuery to check the current MQ */
+  content: 'mobile';
+  display: none;
+}
+@media only screen and (min-width: 1050px) {
+  body::before {
+    /* never visible - this is used in jQuery to check the current MQ */
+    content: 'desktop';
+  }
+}
+
+a {
+  color: #267481;
+  text-decoration: none;
+}
+.fa-map-marker:before {
+  padding-left: 30px;
+}
+.dot-art{
+  position: absolute;
+}
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+@media only screen and (min-width: 1050px) {
+  body[data-hijacking="on"] {
+    overflow: hidden;
+  }
+}
+
+.cd-section > div{
+  height: 100vh;
+}
+
+.cd-section:first-of-type > div {
+  background-color: #1e88e5;
+  height: 100vh;
+}
+.cd-section:first-of-type > div::before {
+  background-color: #000;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 20px;
+  z-index: 2;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #6a7083;
+}
+.cd-section:nth-of-type(2) > div {
+  background-color: #ffffff;
+  color:#7b7b7b;
+}
+.cd-section:nth-of-type(3) > div {
+  background-color: #1e88e5;
+}
+.cd-section:nth-of-type(4) > div {
+  background-color: #ffffff;
+}
+.cd-section:nth-of-type(5) > div {
+  background-color: #ffffff;
+  color: #7b7b7b;
+}
+.cd-section:nth-of-type(6) > div {
+  background-color: #ffffff;
+}
+.cd-section:nth-of-type(7) > div {
+  background-color: #ffffff;
+}
+.cd-section:nth-of-type(8) > div {
+  background-color: #ffffff;
+}
+.cd-section:nth-of-type(9) > div {
+  background-color: #ffffff;
+}
+
+  [data-hijacking="on"] .cd-section {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  [data-hijacking="on"] .cd-section > div {
+    visibility: visible;
+  }
+  [data-hijacking="off"] .cd-section > div {
+    opacity: 0;
+  }
+  [data-animation="rotate"] .cd-section {
+    /* enable a 3D-space for children elements */
+    -webkit-perspective: 1800px;
+    -moz-perspective: 1800px;
+    perspective: 1800px;
+  }
+  [data-hijacking="on"][data-animation="rotate"] .cd-section:not(:first-of-type) {
+    -webkit-perspective-origin: center 0;
+    -moz-perspective-origin: center 0;
+    perspective-origin: center 0;
+  }
+  [data-animation="scaleDown"] .cd-section > div, [data-animation="gallery"] .cd-section > div, [data-animation="catch"] .cd-section > div {
+    box-shadow: 0 0 0 rgba(25, 30, 46, 0.4);
+  }
+  [data-animation="opacity"] .cd-section.visible > div {
+    z-index: 1;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .cd-section:first-of-type > div::before {
+    display: none;
+  }
+}
+
+  [data-hijacking="on"] .cd-section > div {
+    position: absolute;
+  }
+  [data-animation="rotate"] .cd-section > div {
+    -webkit-transform-origin: center bottom;
+    -moz-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    -o-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+}
+
+.cd-vertical-nav {
+  /* lateral navigation */
+  position: fixed;
+  z-index: 1;
+  right: 3%;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: none;
+}
+.cd-vertical-nav a {
+  display: block;
+  height: 40px;
+  width: 40px;
+  /* image replace */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: url(../img/cd-icon-arrow.svg) no-repeat center center;
+}
+.cd-vertical-nav a.cd-prev {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-bottom: 10px;
+}
+.cd-vertical-nav a.inactive {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  -moz-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  transition: opacity 0.2s 0s, visibility 0s 0.2s;
+}
+@media only screen and (min-width: 1050px) {
+  .cd-vertical-nav {
+    display: block;
+  }
+}
+.color-border .border-blue{
+  height: 1vh;
+  background-color: #1e88e5;
+  float: left;
+}
+.color-border .border-green{
+  height: 1vh;
+  background-color: #34a853;
+  float: left;
+}
+.color-border .border-yellow{
+  height: 1vh;
+  background-color: #fbbc05;
+  float: left;
+}
+.color-border .border-red{
+  height: 1vh;
+  background-color: #ea4335;
+  float: left;
+}
+.header-title{
+  color:#fff;
+  font-family: 'Raleway', sans-serif;
+}
+.header-title h1{
+  margin-left: 0;
+  margin-right: 0;
+  display: block;
+  font-weight: 900;
+  font-size: 4.5em; 
+  text-align: center;
+  margin-top: 50px;
+}
+.header-title img{
+  height: 100px;
+  width: 100px;
+
+}
+.header-title h3 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.content-wrap .clock-row{
+  height:60vh;
+  margin-top: 200px;
+ } 
+ .content-wrap .header-title .howdy{
+  font-weight: 600;
+  font-size: 70px;
+  text-shadow: 2px 2px #01579B;
+ }
+.content-wrap .header-title .script-16{
+  text-align: center;
+  color: #1565c0;
+  margin-top: -26px;
+  font-family: 'Space Mono', monospace;
+}
+.content-wrap .clock-row .wrapper{
+  height: 12vh;
+  border: solid 4px #1565c0;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+} 
+ .content-wrap .clock-row .wrapper .normal-height{
+  height:12vh;
+  border: solid 4px #1565c0;
+ }
+.content-wrap .clock-row .wrapper .over-height{
+  height: 18vh;
+  border: solid 4px #1565c0;
+  border-left: hidden;
+  border-top: hidden;
+}
+.content-wrap .clock-row .wrapper .over-height h3{
+  font-size: 50px;
+}
+.content-wrap .clock-row .wrapper .over-height h4{
+  color: #1565c0;
+  font-weight: 700;
+  padding-top: 43px;
+}
+.content-wrap .clock-row .wrapper .over-left{
+  border:hidden;
+  background-color: #1565c0;
+}
+.content-wrap .clock-row .wrapper .over-left h2{
+  font-size: 23px;
+  text-align: center;
+  padding-top: 18px;
+}
+.content-wrap .clock-row .wrapper a .over-left h2{
+  color:#ffffff;
+}
+.content-wrap .clock-row .wrapper a .over-left:hover{
+  color: #000;
+  background-color: transparent;
+  -o-transition:.8s;
+  -ms-transition:.8s;
+  -moz-transition:.8s;
+  -webkit-transition:.8s;
+}
+.content-wrap .clock-row .wrapper .over-right h2{
+  font-size: 23px;
+  text-align: center;
+  padding-top: 18px;
+}
+.content-wrap .clock-row .wrapper a .over-right h2{
+  color:#ffffff;
+}
+.content-wrap .clock-row .wrapper a .over-right:hover{
+  background-color:#1565c0;
+  -o-transition:.8s;
+  -ms-transition:.8s;
+  -moz-transition:.8s;
+  -webkit-transition:.8s;
+}
+.content-wrap .clock-row .wrapper .over-right{
+  border:hidden;
+}
+
+.content-wrap .clock-row .wrapper .none-hide{
+  border-left: solid 4px #1565c0;
+}
+.about_us{
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  color: #7b7b7b;
+}
+.about_us h2{
+  text-align: center;
+  padding-top: 10vh;
+  font-size: 50px;
+  font-weight: 300;
+}
+.about_us .aboutgdg{
+  padding-top: 40px;
+  font-size: 18px;
+  vertical-align: center;
+}
+.about_us .container-fluid{
+  margin-top: 14vh;
+}
+.about_us img{
+  position: absolute;
+
+}
+.agenda .container .about-session{
+  height: 50vh;
+}
+
+.agenda{
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  color: #ffffff;
+  background-color: #1e88e5;
+}
+.agenda  h2{
+  text-align: center;
+  padding-top: 10vh;
+  font-size: 50px;
+  font-weight: 300;
+}
+.agenda .aboutgdg{
+  padding-top: 40px;
+  font-size: 18px;
+  vertical-align: center;
+ }
+
+ .agenda .about-session img{
+  height: 400px;
+  width: 400px;
+ }
+  .agenda .about-session p{
+    font-size: 18px;
+  }
+ 
+ .speakers{
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  color:  #7b7b7b;
+ }
+ .speakers h2{
+  padding-top: 10vh;
+  font-size: 50px;
+  font-weight: 300;
+ }
+
+ .the-venue{
+    font-family: 'Raleway', sans-serif;
+    color: #7b7b7b;
+ }
+ .the-venue .the-venue-detailts{
+  text-align: center;
+ }
+ .the-venue .the-venue-detailts h2{
+  font-size: 50px;
+  font-weight: 300;
+ }
+ .the-venue .the-venue-detailts .venue-topic{
+  margin-top: 10vh;
+ }
+  .the-venue .the-venue-detailts .venue-details{
+  margin-top: 25vh;
+ }
+
+ .get-register{
+  color: #7b7b7b;
+  font-family: 'Raleway', sans-serif;
+ }
+ .get-register h2{
+  font-size: 50px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 10vh;
+ }
+ .get-register .get-dis{
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 40px;
+ }
+ .get-register .blue-border{
+  border: solid 2px #1e88e5 ; 
+  height: 500px;
+  padding-top: 90px;
+ }
+ .get-register .blue-border .codelab-register{
+  padding-left: 100px;
+  padding-top: 30px;
+ }
+ .get-register .blue-border .codelab-register-button{
+  height: 157px;
+  padding-left: 200px;
+  padding-top: 30px;
+ }
+ .btn-primary{
+  height: 60px !important;
+  width: 140px !important;
+  background-color: transparent !important;
+  color: #1e88e5  !important;
+  border: 2px solid #1e88e5 !important;
+  text-align: center;
+  font-size: 25px !important;
+  line-height: 1;
+  border-radius: 0 !important;
+ }
+ .get-register .blue-border .conference-register{
+  padding-left: 100px;
+  padding-top: 30px;
+ }
+ .dot-border{
+  border-top: dashed 2px #1e88e5;
+ }
+
+.background-cover{
+   
+    background-image: url(../img/bg-all.png);
+    bottom: 0;
+    z-index: 0;
+    left: 0;
+    height: 250px;
+    width: 100%;
+}
+/* Sweep To Right */
+.hvr-sweep-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1e88e5;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+  color: white!important;
+}
+.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.about_us{
+  height: 64vh;
+}
+.bg-img{
+  display: block;
+  margin: auto;
+  position: absolute;
+  bottom: -35vh;
+  margin-left: 10%;
+}
+/*================================================Organizers-Section================================================*/
+.organizers{
+  color: #7b7b7b;
+  font-family: 'Raleway', sans-serif;
+}
+.organizers h2{
+  font-size: 50px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 10vh;
+ }
+ .organizers img{
+  display: block;
+  margin:auto;
+  height: 250px;
+ }
+.organizers .img-sec{
+  height: 250px !important;
+}
+ /*==============================================Organizers-section-closed===========================================*/
+
+ /*=========================================Media-quary-End===============================================*/
+  .agenda .about-session .round-image img:hover{
+    transition:all 0.4s ease;
+    -webkit-transform:scale(0.9);
+    -ms-transform:scale(0.9);
+    -transform: scale(0.9);
+  }
+  .agenda .about-session .round-image img{
+    background-size: cover;
+  }
+
+ /*======================================footer-style-start================================================*/
+ .blue-text{
+  color:#66b4f9;
+  margin-left: -42%;
+}
+.ultra-blue-text{
+  color: #512da8;
+  margin-left: -35%;
+}
+.yellow-text{
+  color: #ffd740;
+}
+.orange-text{
+  color: #ef6c00;
+}
+.view-text{
+ margin-left: -30%;
+}
+.upper-bracket{
+  margin-left:-27%;
+}
+.second-bracket{
+  margin-left: -35%;
+}
+ .green-text{
+  color:#18a15e;
+ }
+ .footer a{
+  color: #ffffff;
+ }
+ .footer a:hover{
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+ }
+ .featured .big{
+  background-image: url(../img/f1.png);
+  background-size: cover;
+ }
+ .featured .big:hover{
+  transition:all 0.4s ease;
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+   transform: scale(0.9);
+}
+ .featured  .first{
+  background-image: url(../img/f2.png);
+  background-size: cover;
+ }
+ .featured .second{
+  background-image: url(../img/f3.png);
+  background-size: cover;
+ }
+ .featured .small:hover{
+  transition:all 0.4s ease;
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+   transform: scale(0.9);
+
+ }
+ .footer{
+  height: 8vh;
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+  color:#ffffff;
+  background-color: #1e88e5;
+  bottom: 0!important;
+ }
+
+ /*==============================================featured-2015=========================================================*/
+  .featured{
+  color: #7b7b7b;
+  font-family: 'Raleway', sans-serif;
+ }
+ .featured h2{
+  font-size: 50px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 10vh;
+ }
+ .featured .big{
+  height: 100vh !important;
+ }
+ .featured .small{
+  height: 50vh !important;
+ }
+  /*==============================================featured-2015-closed=========================================================*/
+
+  /*======================================footer-style-start================================================*/
+
+@media only screen and (min-width: 1000px) {
+ .footer h4{
+  margin-top: 20px;
+ }
+}
+ .green-text{
+  color:#18a15e;
+ }
+ .footer a{
+  color: #ffffff;
+ }
+ .footer a:hover{
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+ }
+ /*====================================footer-style-closed=================================================*/
+
+ /*=========================================Media-quary-start===============================================*/
+/*--Screen-res 1440px ---*/
+@media only screen and (max-width: 1440px) {
+  .header-title h1{
+    font-size: 3.5em;
+
+  }
+  .header-title img{
+    height: 50px;
+    width: 50px;
+  }
+  .content-wrap .header-title .howdy{
+    font-size: 50px;
+    padding-bottom: 30px;
+  }
+  .content-wrap .clock-row{
+    margin-top: 170px;
+  }
+  .content-wrap .clock-row .wrapper{
+    height: 13vh!important;
+  }
+  .content-wrap .clock-row .wrapper .over-height {
+    height: 20vh!important;
+  }
+  .content-wrap .clock-row .wrapper .over-left h2{
+    font-size: 20px;
+    padding-top: 15px;
+    font-weight: 700;
+  }
+  .content-wrap .clock-row .wrapper .over-right h2{
+    font-size: 20px;
+    padding-top: 15px;
+    font-weight: 700;
+  }
+  .content-wrap .clock-row .wrapper .over-height h3{
+    font-size: 40px;
+  }
+  .content-wrap .clock-row .wrapper .over-height h4{
+    font-size: 14px;
+    padding-top: 45px;
+  }
+  .about_us h2{
+    font-size: 36px;
+    padding-top: 4vh;
+  }
+  .about_us .aboutgdg{
+    font-size: 17px;
+    line-height: 26px;
+  }
+  .agenda  h2{
+    font-size: 36px;
+    padding-top: 4vh;
+  }
+  .agenda .aboutgdg{
+    padding-top: 10px;
+  }
+  .agenda .about-session img{
+    height: 300px;
+    width: 300px;
+  }
+  .agenda .about-session p{
+    font-size: 14px;
+  }
+  .agenda .container .about-session{
+    height: 41vh;
+  }
+  .agenda h3{
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .speakers h2{
+    font-size: 36px;
+    padding-top: 4vh;
+    text-align: center;
+  }
+  .speakers .profile{
+    margin-top: 20px;
+  } 
+  .speakers .profile img:hover{
+    border: solid 6px  #1e88e5;
+    -webkit-transition: .4s ease;
+    -transition: .4s ease;
+  }
+  .speakers .profile img:hover h4{
+    color: #000;
+  }
+  .speakers .profile h6{
+    line-height: 18px;
+  }
+
+  .the-venue .the-venue-detailts .venue-topic{
+    margin-top: 4vh;
+    font-size: 36px;
+  }
+  .the-venue .the-venue-detailts .venue-details{
+    margin-top: 25vh;
+  }
+  .the-venue .the-venue-detailts h2{
+    font-size: 30px;
+  }
+  .get-register h2{
+    margin-top: 0;
+    font-size: 36px;
+    padding-top: 10vh;
+  }
+  .get-register .get-dis{
+    padding-top: 10px;
+    font-size: 17px;
+    line-height: 24px;
+  }
+  .get-register .blue-border{
+    padding-top: 50px;
+    text-align: center;
+    height: 380px;
+  }
+  .get-register .blue-border .codelab-register{
+    padding-left: 0;
+    padding-top: 0px;
+  }
+  .get-register .blue-border .codelab-register  h4{
+    font-size: 14px;
+  }
+  .get-register .blue-border .conference-register h4{
+    font-size: 14px;
+  }
+  .get-register .blue-border .codelab-register-button{
+    padding-left: 0;
+    height: 132px;
+  }
+  .get-register .blue-border .conference-register{
+   padding-left: 0;
+   padding-top: 20px ;
+
+  }
+  .organizers h2{
+    font-size: 36px;
+    margin-top: 4vh;
+  }
+  .organizers img{
+    height: 200px;
+  }
+  .organizers .img-sec{
+    height: 100%!important;
+  }
+  .the-crew h2{
+    font-size: 36px;
+    margin-top: 4vh;
+  }
+ 
+  .featured h2{
+  font-size: 36px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 10vh;
+ }
+.featured .big{
+  height: 100vh;
+ }
+ .featured .small{
+  height: 50vh;
+ }
+
+
+/*--Screen-res 1366px ---*/
+@media only screen and (max-width: 1366px) {
+  .header-title h1{
+    font-size: 3.0em;
+
+  }
+  .header-title img{
+    height: 50px;
+    width: 50px;
+  }
+  .content-wrap .header-title .howdy{
+    font-size: 40px;
+    padding-bottom: 30px;
+  }
+  .content-wrap .clock-row{
+    margin-top: 120px;
+  }
+  .content-wrap .clock-row .wrapper{
+    height: 13vh!important;
+  }
+  .content-wrap .clock-row .wrapper .over-height {
+    height: 20vh!important;
+  }
+  .content-wrap .clock-row .wrapper .over-left h2{
+    font-size: 20px;
+    padding-top: 5px;
+    font-weight: 700;
+  }
+  .content-wrap .clock-row .wrapper .over-right h2{
+    font-size: 20px;
+    padding-top: 10px;
+    font-weight: 700;
+  }
+  .content-wrap .clock-row .wrapper .over-height h3{
+    font-size: 40px;
+  }
+  .content-wrap .clock-row .wrapper .over-height h4{
+    font-size: 14px;
+    padding-top: 25px;
+  }
+  .about_us h2{
+    font-size: 36px;
+    padding-top: 4vh;
+  }
+  .about_us .aboutgdg{
+    font-size: 17px;
+    line-height: 26px;
+  }
+  .agenda  h2{
+    font-size: 36px;
+    padding-top: 4vh;
+  }
+  .agenda .aboutgdg{
+    padding-top: 10px;
+  }
+  .agenda .about-session img{
+    height: 300px;
+    width: 300px;
+  }
+  .agenda .about-session p{
+    font-size: 14px;
+  }
+  .agenda .container .about-session{
+    height: 41vh;
+  }
+  .agenda h3{
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .speakers h2{
+    font-size: 36px;
+    padding-top: 4vh;
+  }
+
+  .the-venue .the-venue-detailts .venue-topic{
+    margin-top: 4vh;
+    font-size: 36px;
+  }
+  .the-venue .the-venue-detailts .venue-details{
+    margin-top: 25vh;
+  }
+  .the-venue .the-venue-detailts h2{
+    font-size: 30px;
+  }
+  .get-register h2{
+    margin-top: 0;
+    font-size: 36px;
+    padding-top: 10vh;
+  }
+  .get-register .get-dis{
+    padding-top: 10px;
+    font-size: 17px;
+    line-height: 24px;
+  }
+  .get-register .blue-border{
+    padding-top: 50px;
+    text-align: center;
+    height: 380px;
+  }
+  .get-register .blue-border .codelab-register{
+    padding-left: 0;
+    padding-top: 0px;
+  }
+  .get-register .blue-border .codelab-register  h4{
+    font-size: 14px;
+  }
+  .get-register .blue-border .conference-register h4{
+    font-size: 14px;
+  }
+  .get-register .blue-border .codelab-register-button{
+    padding-left: 0;
+    height: 132px;
+  }
+  .get-register .blue-border .conference-register{
+   padding-left: 0;
+   padding-top: 20px ;
+
+  }
+  .organizers h2{
+    font-size: 36px;
+    margin-top: 4vh;
+  }
+  .organizers img{
+    height: 200px;
+  }
+  .organizers .img-sec{
+    height: 100%!important;
+  }
+  .the-crew h2{
+    font-size: 36px;
+    margin-top: 4vh;
+  }
+ 
+  .featured h2{
+  font-size: 36px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 10vh;
+ }
+.featured .big{
+  height: 400px;
+ }
+ .featured .small{
+  height: 200px;
+
+ }
+ .about_us{
+  height: 75vh;
+}
+.bg-img{
+  display: block;
+  margin: auto;
+  position: absolute;
+  bottom: -40vh;
+  margin-left: 10%;
+}
+ /*--I_pad-resolution--*/
+ @media only screen and (max-width: 768px){
+
+ } 
+ 
+ /*--- I-PHONE-6-PLUS--*/
+@media only screen and (max-width: 414px) {
+  .fa-map-marker:before {
+    padding-left: 0px;
+}
+  .header-title h1{
+    font-size: 2.0em;
+
+  }
+  .header-title img{
+    height: 40px;
+    width: 40px;
+  }
+  .content-wrap .header-title .howdy{
+    font-size: 32px;
+    padding-bottom: 30px;
+  }
+  .content-wrap .clock-row{
+    margin-top: 105px;
+  }
+  .content-wrap .clock-row .wrapper .over-left h2{
+    font-size: 10px;
+    padding-top: 10px;
+    font-weight: 700;
+  }
+  .content-wrap .clock-row .wrapper .over-right h2{
+    font-size: 10px;
+    padding-top: 10px;
+    font-weight: 700;
+  }
+  .content-wrap .clock-row .wrapper .over-height h3{
+    font-size: 30px;
+  }
+  .content-wrap .clock-row .wrapper .over-height h4{
+    font-size: 14px;
+    padding-top: 38px;
+  }
+  .about_us h2{
+    font-size: 36px;
+    padding-top: 4vh;
+  }
+  .about_us .aboutgdg{
+    font-size: 17px;
+    line-height: 26px;
+  }
+  .agenda  h2{
+    font-size: 36px;
+    padding-top: 4vh;
+  }
+  .agenda .aboutgdg{
+    padding-top: 10px;
+  }
+  .agenda .about-session img{
+    height: 200px;
+    width: 200px;
+  }
+  .agenda .about-session p{
+    font-size: 14px;
+  }
+  .agenda .container .about-session{
+    height: 41vh;
+  }
+  .agenda h3{
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .speakers{
+    height: 250vh;
+  }
+  .speakers  h2{
+    font-size: 36px;
+    padding-top: 4vh;
+  }
+  .speakers img{
+    height: 70px;
+    width: 70px;
+  }
+  .speakers h4{
+    font-size: 14px;
+  }
+  .the-venue .the-venue-detailts .venue-topic{
+    margin-top: 4vh;
+    font-size: 36px;
+  }
+  .the-venue .the-venue-detailts .venue-details{
+    margin-top: 7vh;
+  }
+  .the-venue .the-venue-detailts h2{
+    font-size: 20px;
+  }
+  .get-register h2{
+    margin-top: 0;
+    font-size: 36px;
+  }
+  .get-register .get-dis{
+    padding-top: 10px;
+    font-size: 14px;
+    line-height: 12px;
+  }
+  .get-register .blue-border{
+    padding-top: 0;
+    text-align: center;
+    height: 490px;
+  }
+  .get-register .blue-border .codelab-register{
+    padding-left: 0;
+    padding-top: 0;
+  }
+  .get-register .blue-border .codelab-register  h4{
+    font-size: 14px;
+  }
+  .get-register .blue-border .conference-register h4{
+    font-size: 14px;
+  }
+  .get-register .blue-border .codelab-register-button{
+    padding-left: 0;
+    height: 132px;
+  }
+  .get-register .blue-border .conference-register{
+   padding-left: 0;
+   padding-top: 0;
+
+  }
+  .featured .big{
+  height: 20vh;
+ }
+ .featured .small{
+  height: 20vh;
+ }
+  .organizers h2{
+    font-size: 36px;
+    margin-top: 4vh;
+  }
+  .organizers img{
+    height: 100px;
+  }
+  .organizers .img-sec{
+    height: 100%!important;
+  }
+  .the-crew h2{
+    font-size: 36px;
+    margin-top: 4vh;
+  }
+ .about_us{
+  height: 75vh;
+}
+.bg-img{
+  display: block;
+  margin: auto;
+  position: absolute;
+  bottom: -20vh;
+  width: 100%;
+  }
+  .agenda{
+  height:120vh;
+}
+.agenda .fadeInRight{
+  padding-top: 40px;
+}
+}
+
+@media only screen and (max-width: 414px) {
+  .get-register{
+    height: 120vh;
+  }
+}
+
+ /*====================================footer-style-closed=================================================*/
