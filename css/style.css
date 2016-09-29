@@ -419,7 +419,7 @@ Main Components
   padding-top: 40px;
  }
  .get-register .blue-border{
-  border: solid 2px #1e88e5 ; 
+  border: solid 2px #1e88e5; 
   height: 500px;
   padding-top: 90px;
  }
@@ -915,7 +915,7 @@ Main Components
   .get-register .blue-border{
     padding-top: 50px;
     text-align: center;
-    height: 380px;
+    height: 480px;
   }
   .get-register .blue-border .codelab-register{
     padding-left: 0;
