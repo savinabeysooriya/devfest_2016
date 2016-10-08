@@ -436,8 +436,8 @@ Main Components
   }
 }
  .get-register .blue-border{
-  border: solid 2px #1e88e5; 
-  height: 500px;
+  border: solid 2px #1e88e5;
+  /* height: 500px; */
   padding-top: 90px;
  }
  .get-register .blue-border .codelab-register{
@@ -771,6 +771,9 @@ Main Components
   .the-venue .the-venue-detailts h2{
     font-size: 30px;
   }
+  .get-register div {
+      height: auto;
+  }
   .get-register h2{
     margin-top: 0;
     font-size: 36px;
@@ -783,8 +786,7 @@ Main Components
   }
   .get-register .blue-border{
     padding-top: 20px;
-    
-    height: 380px;
+    /* height: 380px; */
   }
 
   .get-register .blue-border .codelab-register{
@@ -922,7 +924,7 @@ Main Components
   }
   .get-register .blue-border{
     padding-top: 20px;
-    height: 480px;
+    /* height: 480px; */
   }
   .get-register .blue-border .codelab-register{
     padding-left: 0;
@@ -1089,7 +1091,7 @@ Main Components
   .get-register .blue-border{
     padding-top: 0;
     text-align: center;
-    height: 490px;
+    /* height: 490px; */
   }
   .get-register .blue-border .codelab-register{
     padding-left: 0;
@@ -1150,7 +1152,7 @@ Main Components
 
 @media only screen and (max-width: 414px) {
   .get-register{
-    height: 120vh;
+    /* height: 120vh; */
   }
 }
 
