@@ -418,6 +418,23 @@ Main Components
   text-align: center;
   padding-top: 40px;
  }
+
+  .get-register .blue-border .register  h4{
+    font-size: 14px;
+  }
+  .get-register .blue-border .codelab-register-button{
+    padding-left: 0;
+    height: 132px;
+    text-align: right;
+    padding-right: 1%;
+  }
+@media only screen and (max-width: 990px) {
+  .get-register .blue-border .register  h3,
+  .get-register .blue-border .register  h4,
+  .get-register .blue-border .codelab-register-button{
+      text-align: center;
+  }
+}
  .get-register .blue-border{
   border: solid 2px #1e88e5; 
   height: 500px;
@@ -765,23 +782,14 @@ Main Components
     line-height: 24px;
   }
   .get-register .blue-border{
-    padding-top: 50px;
-    text-align: center;
+    padding-top: 20px;
+    
     height: 380px;
   }
+
   .get-register .blue-border .codelab-register{
     padding-left: 0;
     padding-top: 0px;
-  }
-  .get-register .blue-border .codelab-register  h4{
-    font-size: 14px;
-  }
-  .get-register .blue-border .conference-register h4{
-    font-size: 14px;
-  }
-  .get-register .blue-border .codelab-register-button{
-    padding-left: 0;
-    height: 132px;
   }
   .get-register .blue-border .conference-register{
    padding-left: 0;
@@ -913,8 +921,7 @@ Main Components
     line-height: 24px;
   }
   .get-register .blue-border{
-    padding-top: 50px;
-    text-align: center;
+    padding-top: 20px;
     height: 480px;
   }
   .get-register .blue-border .codelab-register{
