@@ -7,26 +7,6 @@ As usual, you will be able to interact with the speakers and get the best out of
 
 Be ready for some novel experiences as GDG Sri Lanka will be bringing you an interesting DevFest keeping with the tradition of gradually improving each year.
 
-* You have to be there before 12.30AM
-* Registration starts at 8.30AM
-
-# Cardboard Unity Codelabs
-Here add some description about the session. As usual, you will be able to interact with the speakers and get the best out of the time. As all of them encourage questions about their topics,
-author-
-Thilini Disanayake
-
-# Break
-10.15AM - 10.30AM
-
-# Cardboard Unity Codelabs
-Here add some description about session. As usual, you will be able to interact with the speakers and get the best out of the time. As all of them encourage questions about their topics,
-author-
-Thilini Disanayake
-
-# WrapUp Speak
-Pamuditha & Raveen
-5.15PM - 5.25PM
-
 Be ready for some novel experiences as GDG Sri Lanka will be bringing you an interesting DevFest keeping with the tradition of gradually improving each year.
 
 © Copyright <a href="http://gdgsrilanka.org/">GDG Sri Lanka</a>
