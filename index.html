@@ -42,6 +42,7 @@
 						<a href="index.html"><i class="fa fa-home"></i><span>Home</span></a>
 						<a href="codelab.html"><i class="fa fa-code"></i><span>CodeLab</span></a>
 						<a href="conference.html"><i class="fa fa-tasks"></i><span>Conference</span></a>
+						<a href="ourteam.html"><i class="fa fa-users"></i><span>Team</span></a>
 						<a href="#"><i class="fa fa-sign-in"></i><span>Register</span></a>
 					</div>
 				</nav>
@@ -52,7 +53,7 @@
 				<img src="img/colombo.png" class=" wow fadeInUp bg-img img-responsive">
 				<div class="header-title">
 					<h1 class="wow fadeIn"><img src="img/Dev_logo.png">GDG DevFest 2016</h1>
-					 <h3  class="wow fadeIn"><i class="fa fa-calendar-check-o" aria-hidden="true"></i><span class=""> November 5 </span><br class="hidden-lg hidden-md hidden-sm"><br class="hidden-lg hidden-md hidden-sm">
+					 <h3  class="wow fadeIn"><i class="fa fa-calendar-check-o" aria-hidden="true"></i><span class=""> November 6 </span><br class="hidden-lg hidden-md hidden-sm"><br class="hidden-lg hidden-md hidden-sm">
 						<i class="fa fa-map-marker" aria-hidden="true"></i> ICBT Campus, Bambalapitiya</h3>
 					<h1 id="greeting" class="wow fadeIn howdy">Hello Developer!</h1>
 					<h4 class="wow fadeIn script-16">&lt;script src=”devfest2016”&gt;&lt;<span>/</span>script&gt;</h4>
@@ -122,7 +123,7 @@
 		</div>
 		</div>
 	</section>
-
+<!-- 
 	<section class="cd-section speakers">
 		<div>
 			<h2>Speakers</h2>
@@ -152,7 +153,7 @@
 						
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<section class="cd-section the-venue">
 		<div>	<span class=" wow fadeInRight hidden-xs hidden-sm">
@@ -172,10 +173,10 @@
 		</div>
 	</section>
 	<section class="cd-section get-register">
-		<div>
+		
 			<div class="wow fadeInUp container">
 				<h2>Tickets</h2>
-				<h4 class="get-dis">Tickets will be available soon...</h4>	
+			
 				<div class="col-lg-12 col-md-12 blue-border">
 					
 					<div class="wow fadeIn col-md-9 register codelab-register">
@@ -190,7 +191,7 @@
 					
 					<div class="wow fadeIn col-md-9 register conference-register">
 						<h3>Register for Conference</h3>
-						<h4>Tickets will be available soon...</h4>
+						<h4></h4>
 					</div>
 					<div class=" wow fadeIn col-md-3 register codelab-register-button">
 						<button type="button" class="btn btn-primary  hvr-sweep-to-right">Register</button>
@@ -205,33 +206,40 @@
 					<div class="wow fadeIn col-md-3 register codelab-register-button">
 						<button type="button" class="btn btn-primary hvr-sweep-to-right">Cool!</button>
 					</div>
+              
 				</div>
 					
 					
 			</div>
-		</div>
+		
 	</section>
 	<section class="cd-section organizers">
 		<div>
 			<div class="wow fadeInUp container">
-				<h2>Organizers</h2>
+				<h2>Sponsored by</h2>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-					<div class=" wow fadeInLeft img-sec col-lg-6 col-md-12">
-						<img src="img/img.png" class="img-responsive" >
+					<div class="wow fadeInLeft img-sec col-lg-12 col-md-12 col-xs-12">
+						<img src="img/img.gif" class="img-responsive" >
 					</div>
-					<div class=" wow fadeInRight img-sec col-lg-6 col-md-12">
-						<img src="img/img.png" class="img-responsive">
-					</div> 
+				</div>	
 
-					<div class=" wow fadeInLeft img-sec col-lg-6 col-md-12">
-						<h2>Event Partner</h2>
-						<img src="img/img.png" class="img-responsive">
+					<div class=" wow fadeInLeft img-sec col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<h2>Event Partners</h2>
+						
+							<a>
+						<img  style ="height:45%;width:45%" target="_blank" href="http://www.rsvp.lk" src="http://devfest2015.gdgsrilanka.org/upload/rsvplogo.png" class="img-responsive ">
+					    
+					</a>
+
 					</div>
 					
-					<div class="wow fadeInRight img-sec col-lg-6 col-md-12">
+					<div class="wow fadeInRight img-sec col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<h2>Media Partners</h2>
-						<img src="img/img.png" class="img-responsive">
-					</div> 
+						<a target="_blank" href="www.letmeknow.lk" >
+						<img  style ="height:45%;width:45%"  target="_blank" href="http://www.letmeknow.lk" src="img/LetMeKnow.lk.png" class="img-responsive imagelogo">
+					</a>
+					</div>
+
 				</div>
 			</div>
 		</div>
@@ -252,6 +260,7 @@
 			</div>
 		</div>
 	</section>
+	
 <script src="js/jquery-2.1.4.js"></script>
 <script src="js/velocity.min.js"></script>
 <script src="js/velocity.ui.min.js"></script>
@@ -273,7 +282,7 @@ $(document).ready(function(){
 
 		function countdown(){
 			var now = new Date();
-			var eventDate = new Date(2016, 10,5);
+			var eventDate = new Date(2016, 10,6);
 
 			var currentTiime = now.getTime();
 			var eventTime = eventDate.getTime();
