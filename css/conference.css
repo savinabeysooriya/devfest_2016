@@ -382,6 +382,8 @@ p{
   line-height: 27px;
 }
 /*----------------------------------Time Line Style start--------------------------------------------------*/
+
+
 .first-small{
   height: 10vh;
   background-color: #cfd8dc;
@@ -397,23 +399,23 @@ p{
 }
 .first-big{
   height: 25vh;
-  background-color: #34a853;
+  background-color: #ffcc80;
   color: #ffffff;
 }
 .second-big{
   height: 25vh;
-  background-color: #fbbc05;
+  background-color: #ce93d8;
   color: #ffffff;
   margin-top: 25vh;
 }
 .third-big{
   height: 25vh;
-  background-color: #ea4335;
+  background-color: #34a853;
   color: #ffffff;
 } 
 .fourth-big{
-  height: 25vh;
-  background-color: #1e88e5;
+  height: 15vh;
+  background-color: #f48fb1;
   color: #ffffff;
   margin-top: 25vh;
 } 
@@ -426,7 +428,7 @@ p{
 }
 .fifth-big{
   height: 25vh;
-  background-color: #ea4335;
+  background-color: #ffab91;
   color: #ffffff;
   margin-top: 10vh;
 }
@@ -443,7 +445,7 @@ p{
 }
 .eightath-big{
   height: 25vh;
-  background-color: #fbbc05;
+  background-color: #bcaaa4;
   color: #ffffff;
 }
 .fourth-small{
@@ -459,6 +461,28 @@ p{
   border-right: solid 5px  #fbbc05;
   color: #524f4f;
 }
+
+.keynote {
+	background-color: #1e88e5;
+}
+
+.fast {
+	background-color: #ea4335;
+}
+
+.efficient {
+	background-color: #34a853;
+}
+
+.secure {
+	background-color: #fbbc05;
+}
+
+.tidy {
+	background-color: #1e88e5;
+}
+
+
 @media only screen and (max-width: 1000px) {
   .first-small{
     border-bottom: solid 1px #524f4f;
