@@ -6,6 +6,7 @@
 	<link rel="icon" href="gdg-logo.png" type="image/gif" sizes="16x16">
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,900' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Mitr:300,400,500,700|Quicksand:300,400,700|Space+Mono" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
@@ -154,7 +155,7 @@
 						<h4>Everyone who are selected to the codelab are selected to the conference as well</h4>
 					</div>
 					<div class="wow fadeIn col-md-3 register codelab-register-button">
-						<button type="button" class="btn btn-primary hvr-sweep-to-right">Register</button>
+						<button type="button" class="btn btn-primary hvr-sweep-to-right codelab-btn">Register</button>
 					</div>
 				
 					<div class="col-md-12 dot-border"></div>
@@ -163,8 +164,8 @@
 						<h3>Register for Conference</h3>
 						<h4></h4>
 					</div>
-					<div class=" wow fadeIn col-md-3 register codelab-register-button">
-						<button type="button" class="btn btn-primary  hvr-sweep-to-right">Register</button>
+					<div class="wow fadeIn col-md-3 register codelab-register-button">
+						<button type="button" class="btn btn-primary  hvr-sweep-to-right conference-btn">Register</button>
 					</div>
 					
 					<div class="col-md-12 dot-border"></div>
@@ -196,8 +197,9 @@
 					<div class=" wow fadeInLeft img-sec col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<h2>Event Partners</h2>
 						
-							<a>
-						<img  style ="height:45%;width:45%" target="_blank" href="http://www.rsvp.lk" src="http://devfest2015.gdgsrilanka.org/upload/rsvplogo.png" class="img-responsive ">
+							<div style="text-align: center" class="rsvp">
+							<a href="http://rsvp.lk"><b style="color: #E8004C;">RSVP</b><b style="color: black">.LK</b></div>
+						
 					    
 					</a>
 
@@ -291,7 +293,9 @@ $(document).ready(function(){
 			$('html, body').animate({
 				scrollTop: $(".about_us").offset().top
 			}, 1500);
-		});
+			
+			
+			});
 		
 		var now = new Date();
 		var h = now.getHours();
@@ -306,6 +310,14 @@ $(document).ready(function(){
 		}
 		
 		$("#greeting").html(greeting + "Developer!");
+		
+		$(".codelab-btn").click(function() {
+			window.location.href="http://rsvp.lk/gdgsrilanka/devfestsl2016/codelabs-registration";
+		});
+		
+		$(".conference-btn").click(function() {
+			window.location.href="http://rsvp.lk/gdgsrilanka/devfestsl2016/main-event-registration";
+		});
 	});
 	</script>
 

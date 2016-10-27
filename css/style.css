@@ -1157,6 +1157,11 @@ Main Components
 }
 }
 
+
+.rsvp {
+	font-family: "Nixie One",cursive;
+	font-size: 25vh;
+}	
 @media only screen and (max-width: 414px) {
   .get-register{
     height: 120vh;
